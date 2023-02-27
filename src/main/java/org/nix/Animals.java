@@ -8,30 +8,34 @@ public class Animals {
         }
         @Override
         public void speak() {
-            System.out.printf("%s barks!%\n", getName());
+            System.out.printf("%s barks!%n", getName());
         }
         @Override
         public void eat() {
-            System.out.printf("%s eats!%\n", getName());
+            System.out.printf("%s eats!%n", getName());
         }
         @Override
         public void sleep() {
-            System.out.printf("%s sleeps!%\n", getName());
+            System.out.printf("%s sleeps!%n", getName());
         }
         @Override
         public void play() {
-            System.out.printf("%s plays!%\n", getName());
+            System.out.printf("%s plays!%n", getName());
         }
         @Override
         public void showInfo() {
-            System.out.printf("\nName: %s\n" +
-                    "Age: %s\n" +
-                    "Breed: %s\n" +
-                    "Color: %s\n" +
-                    "Special Traits: %s\n" +
-                    "Owner: %s\n%n", getName(), getAge(), getBreed(), getColor(), getSpecialTrait(), getOwner());
+            System.out.printf("""
+
+                    Name: %s
+                    Age: %s
+                    Breed: %s
+                    Color: %s
+                    Special Traits: %s
+                    Owner: %s
+                    %n""", getName(), getAge(), getBreed(), getColor(), getSpecialTrait(), getOwner());
         }
     }
+
     class Cat extends Abstraction {
         public Cat(String name, int age, String breed, String color, String specialTrait, String owner) {
             super(name, age, breed, color, specialTrait, owner);
@@ -54,12 +58,15 @@ public class Animals {
         }
         @Override
         public void showInfo() {
-            System.out.printf("\nName: %s\n" +
-                    "Age: %s\n" +
-                    "Breed: %s\n" +
-                    "Color: %s\n" +
-                    "Special Traits: %s\n" +
-                    "Owner: %s\n%n", getName(), getAge(), getBreed(), getColor(), getSpecialTrait(), getOwner());
+            System.out.printf("""
+
+                    Name: %s
+                    Age: %s
+                    Breed: %s
+                    Color: %s
+                    Special Traits: %s
+                    Owner: %s
+                    %n""", getName(), getAge(), getBreed(), getColor(), getSpecialTrait(), getOwner());
         }
     }
 }
